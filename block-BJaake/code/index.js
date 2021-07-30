@@ -11,6 +11,7 @@ let filterData ;
 function displayUI(data){
    div.innerHTML = ""
    data.forEach((elm) => {
+      console.log(elm)
     let ul = document.createElement("ul")
     ul.classList.add("flex")
     let li1 = document.createElement("li")
@@ -25,7 +26,12 @@ function displayUI(data){
     span.innerText = elm.newsSite
     let p = document.createElement("p")
     p.innerText = elm.title;
-    li2.append(span,p)
+    let button = document.createElement("button")
+    let a = document.createElement("a")
+    a.innerText = "Read More"
+    a.href = elm.url;
+    button.append(a)
+    li2.append(span,p,button)
     ul.append(li1,li2)
     div.append(ul)
    })
