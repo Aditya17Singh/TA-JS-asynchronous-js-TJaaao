@@ -2,7 +2,7 @@ const input = document.querySelector("select");
 const div = document.querySelector(".container")
 const li1 = document.querySelector("li");
 const li2 = document.querySelector("li");
-let ul = document.querySelector("ul");
+let ul = document.querySelector(".flex");
 
 let filterData ;
 
@@ -43,14 +43,8 @@ function option(arr){
 }
 
 function handle(event){
-   let arr = []
-   filterData.forEach((elm) => {
-      if(event.target.value === elm.newsSite){
-         arr.push(elm)
-      }
-      displayUI(arr)
-   })
-
+   let filter =  filterData.filter(news => news.newsSite === event.target.value)
+   displayUI(filter)
 }
 
 
