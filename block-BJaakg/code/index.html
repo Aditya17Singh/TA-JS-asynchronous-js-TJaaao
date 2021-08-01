@@ -131,6 +131,7 @@ button {
 h4{
     font-size: 1.5rem;
     margin: 1rem 0;
+    display: none;
 }
 h3{
     border: 1px solid gray;
@@ -145,6 +146,9 @@ h3{
 .flex-100{
     flex:  0 1 100%;
 }
+.btn{
+    display: none;
+}
 </style>
 <body>
     <header>
@@ -156,14 +160,14 @@ h3{
         <ul class="container flex wrap">
         </ul>
         <ul class="character-list container">     
-        <!-- <div class="flex container">
+        <div class="flex container">
            <h4>
                character-list
            </h4>
-           <button>
+           <button class="btn">
                close
            </button>
-       </div> -->
+       </div>
         </ul>
     </main>
     <script src="./index.js"></script>
